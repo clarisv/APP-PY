@@ -1,5 +1,7 @@
 import os
 
+restaurante = []
+
 def exibir_nome_do_programa():
     print('sabor express')
 
@@ -29,6 +31,14 @@ def cadastrar_novo_restaurante():
     input('digite uma tecla para voltar ao menu principal')
     main()
 
+def cadastrar_novo_restaurante()
+    os.system('cls')
+    print('cadastro de novo restaurante\n')
+    nome_do_restaurante = input('Digite o nome do restaurante: ')
+    restaurante.append(nome_do_restaurante)
+    print(f'o restaurante {nome_do_restaurante} foi cadastrado com sucesso!\n')
+    input('digite qualquer tecla para voltar ao menu principal')
+    main()
 
 def escolher_opcao():
     try:
