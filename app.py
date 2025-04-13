@@ -39,7 +39,9 @@ def exibir_subtitulo(texto):
 def cadastrar_novo_restaurante():
     exibir_subtitulo('Cadastro de novos restaurantes')
     nome_do_restaurante = input('Digite o nome do restaurante que deseja cadastrar: ')
-    restaurantes.append(nome_do_restaurante)
+    categoria = input(f'Digite a categoria do restaurante {nome_do_restaurante}: ')
+    dados_do_restaurante = {'nome': nome_do_restaurante, 'categoria' : categoria, 'ativos': False}
+    restaurantes.append(dados_do_restaurante) 
     print(f'O restaurante {nome_do_restaurante} foi cadastrado com sucesso!')
     
     voltar_ao_menu_principal()
@@ -55,6 +57,12 @@ def listar_restaurantes():
 
     voltar_ao_menu_principal()
 
+def alterar_estado_restaurante():
+    exibir_subtitulo('alterando estado dop restaurante')
+    nome_restaurante = input('digite o nome do restaurante que deseja')
+
+    voltar_ao_menu_principal()
+
 def escolher_opcao():
     try:
         opcao_escolhida = int(input('Escolha uma opção: '))
@@ -64,7 +72,7 @@ def escolher_opcao():
         elif opcao_escolhida == 2: 
             listar_restaurantes()
         elif opcao_escolhida == 3: 
-            print('Ativar restaurante')
+            alterar_estado_restaurante()
         elif opcao_escolhida == 4: 
             finalizar_app()
         else: 
