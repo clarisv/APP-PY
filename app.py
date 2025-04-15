@@ -60,6 +60,14 @@ def listar_restaurantes():
 def alterar_estado_restaurante():
     exibir_subtitulo('alterando estado dop restaurante')
     nome_restaurante = input('digite o nome do restaurante que deseja')
+    restaurante_encontrado = False
+
+    for restaurante in restaurantes:
+        if nome_restaurante == restaurante['nome']:
+            restaurante_encontrado = True
+            restaurante['ativo'] = not restaurante['ativo']
+            mensagem = f'restaurante'
+
 
     voltar_ao_menu_principal()
 
